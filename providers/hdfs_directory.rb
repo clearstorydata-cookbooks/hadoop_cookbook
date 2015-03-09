@@ -2,7 +2,7 @@
 # Cookbook Name:: hadoop
 # Provider:: hdfs_directory
 #
-# Copyright © 2014 Cask Data, Inc.
+# Copyright © 2015 Cask Data, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -29,3 +29,6 @@
 # 1
 # $ hdfs dfs -ls / | grep tmp
 # drwxrwxrwt   - hdfs  supergroup          0 2014-04-01 20:39 /tmp
+
+use_inline_resources if defined?(use_inline_resources)
+include Hadoop::Hdfs
